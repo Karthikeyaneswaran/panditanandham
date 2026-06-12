@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandit Anandam Siddha & Ayurveda Marunthagam</title>
+    <meta name="description" content="Authentic traditional Siddha and Ayurveda medicines and wellness therapy in Rameswaram, Tamil Nadu. Fast door delivery across India.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" id="favicon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="container">
+            <a href="#home" class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.png" alt="Pandit Anandam Logo" class="logo-img" id="logo-image">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title" data-i18n="logo_title">PANDIT ANANDAM</span>
+                    <span class="logo-tag" data-i18n="logo_tag">Siddha & Ayurveda</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="active" data-i18n="nav_home">Home</a>
+                <a href="#about" data-i18n="nav_about">About Us</a>
+                <a href="#therapy" data-i18n="nav_therapy">Wellness Therapy</a>
+                <a href="#products" data-i18n="nav_products">Products</a>
+                <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+                <a href="#contact" data-i18n="nav_contact">Contact Us</a>
+                <a href="#location" data-i18n="nav_location">Location</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="lang-toggle" class="btn-lang">தமிழ்</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div id="mobile-menu-drawer" class="drawer mobile-nav-drawer">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h3>Menu</h3>
+                <button class="btn-close-drawer" onclick="closeModal('mobile-menu-drawer')">&times;</button>
+            </div>
+            <div class="mobile-nav-body">
+                <nav class="mobile-nav-links">
+                    <a href="#home" class="active" data-i18n="nav_home">Home</a>
+                    <a href="#about" data-i18n="nav_about">About Us</a>
+                    <a href="#therapy" data-i18n="nav_therapy">Wellness Therapy</a>
+                    <a href="#products" data-i18n="nav_products">Products</a>
+                    <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+                    <a href="#contact" data-i18n="nav_contact">Contact Us</a>
+                    <a href="#location" data-i18n="nav_location">Location</a>
+                </nav>
+                <button id="lang-toggle-mobile" class="btn btn-secondary w-full" style="width: 100%;">English / தமிழ்</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content animated fadeInUp">
+                    <h1 data-i18n="hero_title">Pandit Anandam Siddha & Ayurveda</h1>
+                    <p data-i18n="hero_subtitle">Experience the timeless wisdom of traditional Siddha and Ayurvedic healing in the holy land of Rameswaram.</p>
+                </div>
+            </div>
+            <div class="delivery-ribbon">
+                <i class="fas fa-truck" style="margin-right: 8px;"></i>
+                <span data-i18n="hero_delivery_banner">⚡ Door Delivery Available</span>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="nav_about">About Us</h2>
+                    <p class="about-subtitle-lead" data-i18n="about_subtitle">Trusted Service in Rameswaram for Over 15 Years</p>
+                </div>
+
+                <!-- Quote Section -->
+                <div class="about-quote-container animated fadeInUp">
+                    <div class="quote-icon-left"><i class="fas fa-quote-left"></i></div>
+                    <blockquote class="about-blockquote" data-i18n="about_quote">
+                        "What is in the universe is in the body; what is in the body is in the universe" — Agathiyar
+                    </blockquote>
+                    <div class="quote-icon-right"><i class="fas fa-quote-right"></i></div>
+                </div>
+                
+                <!-- Intro Paragraph -->
+                <div class="about-intro-text text-center animated fadeInUp">
+                    <p data-i18n="about_intro">Siddha medicine, one of the ancient medical traditions of Tamil Nadu, is a traditional healthcare system that integrates the human body, nature, and lifestyle. Developed in harmony with Tamil culture for centuries, this wisdom plays a vital role in maintaining health and promoting a balanced, natural lifestyle.</p>
+                </div>
+                
+                <!-- Legacy Grid (Siddha Principles, Siddhars, Our Pharmacy, Mission) -->
+                <div class="about-detailed-grid">
+                    <!-- Card 1: Siddha Principles -->
+                    <div class="about-card animated fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3 data-i18n="about_section1_title">Basic Principles of Siddha</h3>
+                        <p data-i18n="about_section1_text">According to the Siddha medical tradition, the normal functions of the human body are governed by the balance of three fundamental physiological humors: Vadham (Air/Ether), Pittham (Fire), and Kabham (Earth/Water). Diet, lifestyle, and traditional medicine methods are used to support this balance.</p>
+                    </div>
+
+                    <!-- Card 2: Siddhar Wisdom -->
+                    <div class="about-card animated fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-scroll"></i></div>
+                        <h3 data-i18n="about_section2_title">Traditional Knowledge of Siddhars</h3>
+                        <p data-i18n="about_section2_text">The Tamil Siddhars developed various medical texts and formulation systems based on their profound scientific studies of nature, herbs, and human physiology. That traditional knowledge remains the main foundation of Siddha medicine to this day.</p>
+                    </div>
+
+                    <!-- Card 3: Our Pharmacy & Legacy -->
+                    <div class="about-card animated fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-clinic-medical"></i></div>
+                        <h3 data-i18n="about_section3_title">Our Pharmacy & Legacy</h3>
+                        <p class="mb-3" data-i18n="about_section3_text1">Established to honor the heritage of the Thanjavur medical tradition, Pandit Anandam Siddha & Ayurveda Marunthagam has been providing high-quality Siddha and Ayurvedic medicines to the residents of Rameswaram and Ramanathapuram districts for over 15 years.</p>
+                        <p class="partner-distributor-text" data-i18n="about_section3_text2">Operating under the guidance of Mr. K. A. Nallathambi, our pharmacy is an official distributor of IMPCOPS (Indian Medical Practitioners' Co-operative Pharmacy and Stores Ltd.), ensuring that authentic, standard-grade Siddha and Ayurvedic medicines reach the public reliably.</p>
+                    </div>
+
+                    <!-- Card 4: Our Mission -->
+                    <div class="about-card animated fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3 data-i18n="about_mission_title">Our Mission</h3>
+                        <p data-i18n="about_mission_text">Our mission is to preserve the values of traditional Siddha and Ayurvedic medical heritage, improving public health and well-being through standard-grade preparations and compassionate, reliable services.</p>
+                        <div class="about-tagline-badge">
+                            <i class="fas fa-award"></i> <span data-i18n="about_tagline">Trust in Tradition – Companion in Well-being</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Offered Section -->
+                <div class="about-services-section">
+                    <h3 class="text-center" data-i18n="about_services_title">Services We Offer</h3>
+                    <div class="about-services-grid">
+                        <div class="service-item-box">
+                            <i class="fas fa-mortar-pestle"></i>
+                            <span data-i18n="about_service1">Siddha Medicines</span>
+                        </div>
+                        <div class="service-item-box">
+                            <i class="fas fa-hand-holding-medical"></i>
+                            <span data-i18n="about_service2">Ayurvedic Medicines</span>
+                        </div>
+                        <div class="service-item-box">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                            <span data-i18n="about_service_unani">Unani Medicines</span>
+                        </div>
+                        <div class="service-item-box">
+                            <i class="fas fa-leaf"></i>
+                            <span data-i18n="about_service3">Herbal Wellness Products</span>
+                        </div>
+                        <div class="service-item-box">
+                            <i class="fas fa-user-md"></i>
+                            <span data-i18n="about_service4">General Health Guidance</span>
+                        </div>
+                        <div class="service-item-box">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span data-i18n="about_service5">Quality & Trusted Distribution</span>
+                        </div>
+                    </div>
+
+                    <!-- Consultation Highlight Banner -->
+                    <div class="consultation-banner animated fadeInUp">
+                        <i class="fas fa-user-md"></i>
+                        <span data-i18n="about_consultation_box">Medical consultations will be provided by traditional practitioners.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WELLNESS THERAPY SECTION -->
+        <section id="therapy" class="therapy section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="nav_therapy">Wellness Therapy</h2>
+                    <p data-i18n="therapy_subtitle">Revitalize your senses and restore biological balance with our traditional therapeutic treatments.</p>
+                </div>
+                
+                <div class="therapy-benefits-container">
+                    <div class="therapy-benefits-intro">
+                        <p data-i18n="therapy_benefits_intro">Traditional wellness therapies (like Thokkanam, Varmam, and Steam Bath) integrate ancient Siddha & Ayurveda wisdom to heal the body, mind, and spirit. These natural treatments work in harmony with your body to restore balance and vitality.</p>
+                    </div>
+                    <div class="therapy-benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                            <div class="benefit-content">
+                                <h4 data-i18n="benefit_2_title">Natural Pain Relief</h4>
+                                <p data-i18n="benefit_2_desc">Tones muscles, relieves stiffness, and alleviates chronic joint, back, and muscular pain.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-spa"></i></div>
+                            <div class="benefit-content">
+                                <h4 data-i18n="benefit_3_title">Stress & Anxiety Reduction</h4>
+                                <p data-i18n="benefit_3_desc">Calms the nervous system, melts away daily stress, and promotes deep, restful sleep.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-shield-virus"></i></div>
+                            <div class="benefit-content">
+                                <h4 data-i18n="benefit_4_title">Enhanced Immunity</h4>
+                                <p data-i18n="benefit_4_desc">Stimulates energy channels and vital points (Varmam) to strengthen the body's natural defense systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Modern Wellness Massage Sofa Feature -->
+                    <div class="modern-wellness-box animated fadeInUp" style="margin-top: 40px; margin-bottom: 0;">
+                        <div class="wellness-box-header">
+                            <div class="wellness-icon"><i class="fas fa-couch"></i></div>
+                            <div class="wellness-title-info">
+                                <h4 data-i18n="therapy_service_title">Modern Wellness Service</h4>
+                                <span class="badge-new">New / புதியது</span>
+                            </div>
+                        </div>
+                        <p data-i18n="therapy_service_desc">A modern therapy massage sofa facility is available at our center. This wellness service is designed to promote body relaxation, relieve fatigue, and revitalize your senses. It offers a soothing retreat for anyone seeking relief from daily stress and workload.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section id="products" class="products-shop section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="nav_products">Products</h2>
+                    <p data-i18n="shop_subtitle">Premium medicines and wellness products delivered directly to your doorstep.</p>
+                </div>
+
+                <div class="products-order-container">
+                    <div class="order-card text-center animated fadeInUp">
+                        <div class="order-icon"><i class="fas fa-shipping-fast"></i></div>
+                        <h3 data-i18n="order_title">Order Medicines for Door Delivery</h3>
+                        <p data-i18n="order_desc">We supply standard-grade authentic Siddha, Ayurvedic, and Unani medicines. You can easily order your required medicines by contacting us directly.</p>
+                        <p class="order-distributor" data-i18n="order_distributor">We are the official distributor of IMPCOPS (Indian Medical Practitioners' Co-operative Pharmacy & Stores Ltd.), AIMIL, and SKM for the Ramanathapuram district. We can supply any medicine available under IMPCOPS.</p>
+                        <div class="order-actions">
+                            <a href="https://wa.me/919442866033" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> <span data-i18n="order_whatsapp">WhatsApp Order</span>
+                            </a>
+                            <a href="tel:+919442866033" class="btn btn-outline">
+                                <i class="fas fa-phone-alt" style="margin-right: 8px;"></i> <span data-i18n="order_call">Call to Order</span>
+                            </a>
+                        </div>
+                        <div class="order-promise">
+                            <i class="fas fa-truck"></i>
+                            <span data-i18n="order_promise_text">Door Delivery Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION -->
+        <section id="reviews" class="reviews section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="nav_reviews">Reviews</h2>
+                    <p data-i18n="reviews_subtitle">Read honest experiences from people who found healing and health through our medicines and therapies.</p>
+                </div>
+
+                <div class="reviews-grid" id="reviews-list-container">
+                    <!-- Rendered Dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & LOCATION SECTION -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="nav_contact">Contact Us</h2>
+                    <p data-i18n="contact_subtitle">Reach out to us for online consultations, medicine deliveries, or visits.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_address_title">Marunthagam Address</h4>
+                            <p data-i18n="contact_address_val">Pandit Anandam Siddha & Ayurveda Marunthagam, East Car Street (Near Temple), Rameswaram, Tamil Nadu - 623526</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_phone_title">Phone & WhatsApp</h4>
+                            <p data-i18n="contact_phone_val">+91 94428 66033 / +91 70106 00410</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_email_title">Email Support</h4>
+                            <p>info@panditanandamsiddha.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_hours_title">Opening Hours</h4>
+                            <p data-i18n="contact_hours_val">Monday - Sunday: 8:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP / LOCATION SECTION -->
+        <section id="location" class="section-padding" style="background-color: var(--color-bg-cream); border-top: 1px solid var(--color-border);">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom: 30px;">
+                    <h2 data-i18n="nav_location">Location</h2>
+                    <p data-i18n="location_title">Our Rameswaram Location</p>
+                </div>
+                
+                <div class="map-container">
+                    <iframe class="map-iframe" 
+                        src="https://maps.google.com/maps?q=Pandit%20Anandam%20Siddha%20Ayurvedha%20Marunthagam,%20Rameswaram&t=k&z=17&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>PANDIT ANANDAM</h3>
+                    <p data-i18n="footer_desc">Preserving traditional wellness systems since generations. Delivering authentic Siddha and Ayurvedic healthcare to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919442866033" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="#therapy" data-i18n="nav_therapy">Wellness Therapy</a></li>
+                        <li><a href="#products" data-i18n="nav_products">Products</a></li>
+                        <li><a href="#reviews" data-i18n="nav_reviews">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4 data-i18n="footer_contact">Contact Details</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="contact_address_val">East Car Street, Rameswaram, Tamil Nadu</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span data-i18n="contact_phone_val">+91 94428 66033 / +91 70106 00410</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@panditanandamsiddha.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="footer-delivery-promise">
+                        <i class="fas fa-shipping-fast"></i>
+                        <p data-i18n="footer_delivery_note">📦 Door Delivery Available</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center" style="display: block;">
+                <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #cbd5e1; font-size: 0.85rem; vertical-align: middle;">
+                    <span data-i18n="footer_copyright">© 2026 Pandit Anandam Siddha & Ayurveda Marunthagam. All rights reserved.</span>
+                </marquee>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- WELLNESS THERAPY BOOKING MODAL -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-i18n="booking_title">Book a Wellness Session</h3>
+                <button class="btn-close-modal" onclick="closeModal('booking-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="book-name" data-i18n="booking_name">Your Full Name</label>
+                        <input type="text" id="book-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-phone" data-i18n="booking_phone">Phone Number</label>
+                        <input type="tel" id="book-phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-date" data-i18n="booking_date">Preferred Date</label>
+                        <input type="date" id="book-date" class="form-control" required style="background-color: var(--color-bg-cream);">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-therapy" data-i18n="booking_select_therapy">Select Therapy</label>
+                        <select id="book-therapy" class="form-control" style="background-color: var(--color-bg-cream);">
+                            <option value="Thokkanam" data-i18n="therapy_thokkanam_title">Thokkanam (Physical Therapy)</option>
+                            <option value="Varmam" data-i18n="therapy_varmam_title">Varmam Therapy (Vital Points)</option>
+                            <option value="Kayakalpa" data-i18n="therapy_kayakalpa_title">Kayakalpa (Rejuvenation)</option>
+                            <option value="Steam Bath" data-i18n="therapy_steambath_title">Herbal Steam Bath</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-secondary w-full" style="width: 100%; margin-top: 10px;" data-i18n="booking_submit">Confirm Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- TRANSACTION SUCCESS CONFIRMATION MODAL -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="success-icon-badge"><i class="fas fa-check"></i></div>
+                <h3 id="confirm-modal-title" style="margin-bottom: 15px;">Success</h3>
+                <p id="confirm-modal-text" style="color: var(--color-text-muted); margin-bottom: 25px;"></p>
+                <button class="btn btn-primary" onclick="closeModal('confirm-modal')">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Translation Dictionary Database & Controller scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
