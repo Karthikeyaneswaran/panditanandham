@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPCOPS Product Order Form - Pandit Anandam</title>
+    <meta name="description" content="Browse and order traditional Siddha, Ayurveda, and Unani medicines from Pandit Anandam pharmacy. Fast doorstep delivery across India.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" id="favicon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="container">
+            <a href="index.html#home" class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.png" alt="Pandit Anandam Logo" class="logo-img" id="logo-image">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title" data-i18n="logo_title">PANDIT ANANDAM</span>
+                    <span class="logo-tag" data-i18n="logo_tag">Siddha & Ayurveda</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html#home" data-i18n="nav_home">Home</a>
+                <a href="index.html#about" data-i18n="nav_about">About Us</a>
+                <a href="index.html#therapy" data-i18n="nav_therapy">Wellness Therapy</a>
+                <a href="index.html#products" class="active" data-i18n="nav_products">Products</a>
+                <a href="index.html#reviews" data-i18n="nav_reviews">Reviews</a>
+                <a href="index.html#contact" data-i18n="nav_contact">Contact Us</a>
+                <a href="index.html#location" data-i18n="nav_location">Location</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="lang-toggle" class="btn-lang">தமிழ்</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTENT -->
+    <main style="padding-top: 120px; min-height: 80vh;">
+        <div class="container">
+            <!-- Back to Home Link -->
+            <a href="index.html#products" class="btn-back-home">
+                <i class="fas fa-arrow-left"></i>
+                <span data-i18n="go_back_home">Back to Home</span>
+            </a>
+
+            <!-- Page Title Block -->
+            <div style="margin-bottom: 40px;">
+                <h1 data-i18n="product_order_title" style="font-size: 2.2rem; margin-bottom: 10px; color: var(--color-primary-dark);">IMPCOPS Product Order Form</h1>
+                <p data-i18n="product_order_subtitle" style="color: var(--color-text-muted); font-size: 1.1rem; max-width: 800px;">Select multiple medicines from our catalogue and place orders directly via WhatsApp.</p>
+            </div>
+
+            <!-- Search and Filter Panel -->
+            <div style="background-color: var(--color-bg-white); border-radius: 16px; padding: 25px; border: 1.5px solid var(--color-border); box-shadow: var(--shadow-sm); margin-bottom: 30px;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label for="product-search-input" style="font-weight: 700; color: var(--color-primary-dark); font-size: 0.95rem;" data-i18n="catalog_search_label">Search Products:</label>
+                    <div style="position: relative;">
+                        <input type="text" id="product-search-input" class="form-control" placeholder="Type to search 770+ medicines..." style="background-color: var(--color-bg-cream); border-radius: 10px; padding: 14px 45px 14px 18px; border: 1.5px solid var(--color-border); font-size: 1rem; width: 100%; box-sizing: border-box;" data-i18n-placeholder="catalog_search_placeholder" autocomplete="off">
+                        <span id="clear-search-btn" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--color-text-muted); font-size: 1.1rem; display: none;">
+                            <i class="fas fa-times-circle"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products List Form Checkboxes Grid -->
+            <form id="product-order-form">
+                <div id="product-list-grid" class="product-order-grid">
+                    <!-- Checkboxes rendered dynamically by JS -->
+                </div>
+                
+                <!-- Infinite Scroll Scroll Load Trigger -->
+                <div id="load-more-trigger" class="scroll-load-trigger" style="display: none;">
+                    <div class="spinner"></div>
+                    <span data-i18n="loading_more">Loading more products...</span>
+                </div>
+                
+                <!-- Fallback empty matches display -->
+                <div id="no-matches-found" class="text-center" style="display: none; padding: 50px 0;">
+                    <i class="fas fa-search" style="font-size: 3rem; color: var(--color-border); margin-bottom: 15px;"></i>
+                    <h3 data-i18n="no_products_found" style="color: var(--color-text-muted);">No products matched your search.</h3>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- FLOATING CHECKOUT BAR (Visible when items are selected) -->
+    <div id="checkout-floating-bar" class="floating-checkout-bar" style="display: none;">
+        <div class="container">
+            <div class="floating-checkout-content">
+                <div class="floating-checkout-info">
+                    <span id="selected-count-value">0</span> 
+                    <span data-i18n="selected_count">selected</span>
+                </div>
+                <div class="floating-checkout-actions">
+                    <button type="button" id="clear-selection-btn" class="btn btn-outline" style="border: 2px solid #dc3545; color: #dc3545; border-radius: 30px; font-size: 0.9rem; padding: 10px 20px;" data-i18n="clear_selected_btn">
+                        Clear Selection
+                    </button>
+                    <a id="submit-whatsapp-order" href="https://wa.me/917010600410" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #2d6a4f, #40916c); border: none; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; text-decoration: none; border-radius: 30px; padding: 10px 24px; box-sizing: border-box; justify-content: center; color: white;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.1rem;"></i>
+                        <span id="order-btn-text" data-i18n="catalog_order_btn">Order Selected via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>PANDIT ANANDAM</h3>
+                    <p data-i18n="footer_desc">Preserving traditional wellness systems since generations. Delivering authentic Siddha and Ayurvedic healthcare to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/917010600410" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home" data-i18n="nav_home">Home</a></li>
+                        <li><a href="index.html#about" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="index.html#therapy" data-i18n="nav_therapy">Wellness Therapy</a></li>
+                        <li><a href="index.html#products" data-i18n="nav_products">Products</a></li>
+                        <li><a href="index.html#reviews" data-i18n="nav_reviews">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4 data-i18n="footer_contact">Contact Details</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="contact_address_val">East Car Street, Rameswaram, Tamil Nadu</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span data-i18n="contact_phone_val">+91 70106 00410</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:nallan438@gmail.com" style="color: inherit; text-decoration: none;">nallan438@gmail.com</a></span>
+                        </li>
+                    </ul>
+                    
+                    <div class="footer-delivery-promise">
+                        <i class="fas fa-shipping-fast"></i>
+                        <p data-i18n="footer_delivery_note">📦 Door Delivery Available</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center" style="display: block;">
+                <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #cbd5e1; font-size: 0.85rem; vertical-align: middle;">
+                    <span data-i18n="footer_copyright">© 2026 Pandit Anandam Siddha & Ayurveda Marunthagam. All rights reserved.</span>
+                </marquee>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/product-order.js"></script>
+</body>
+</html>
