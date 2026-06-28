@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Therapy - Pandit Anandam Siddha & Ayurveda Marunthagam</title>
+    <meta name="description" content="Revitalize your senses and restore biological balance with traditional Siddha & Ayurveda wellness therapies in Rameswaram.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" id="favicon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.png" alt="Pandit Anandam Logo" class="logo-img" id="logo-image">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title" data-i18n="logo_title">PANDIT ANANDAM</span>
+                    <span class="logo-tag" data-i18n="logo_tag">Siddha & Ayurveda</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="about.html" data-i18n="nav_about">About Us</a>
+                <a href="therapy.html" class="active" data-i18n="nav_therapy">Wellness Therapy</a>
+                <a href="products.html" data-i18n="nav_products">Products</a>
+                <a href="reviews.html" data-i18n="nav_reviews">Reviews</a>
+                <a href="contact.html" data-i18n="nav_contact">Contact Us</a>
+                <a href="location.html" data-i18n="nav_location">Location</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="lang-toggle" class="btn-lang">தமிழ்</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div id="mobile-menu-drawer" class="drawer mobile-nav-drawer">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h3>Menu</h3>
+                <button class="btn-close-drawer" onclick="closeModal('mobile-menu-drawer')">&times;</button>
+            </div>
+            <div class="mobile-nav-body">
+                <nav class="mobile-nav-links">
+                    <a href="index.html" data-i18n="nav_home">Home</a>
+                    <a href="about.html" data-i18n="nav_about">About Us</a>
+                    <a href="therapy.html" class="active" data-i18n="nav_therapy">Wellness Therapy</a>
+                    <a href="products.html" data-i18n="nav_products">Products</a>
+                    <a href="reviews.html" data-i18n="nav_reviews">Reviews</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact Us</a>
+                    <a href="location.html" data-i18n="nav_location">Location</a>
+                </nav>
+                <button id="lang-toggle-mobile" class="btn btn-secondary w-full" style="width: 100%;">English / தமிழ்</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTENT -->
+    <main style="padding-top: 120px; min-height: 80vh;">
+        <!-- WELLNESS THERAPY SECTION -->
+        <section id="therapy" class="therapy section-padding">
+            <!-- Background Video -->
+            <video class="therapy-video" autoplay loop muted playsinline -webkit-playsinline preload="auto">
+                <source src="assets/spinning logo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Overlay to fade background and keep text readable -->
+            <div class="therapy-overlay"></div>
+
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="nav_therapy">Wellness Therapy</h2>
+                    <p data-i18n="therapy_subtitle">Revitalize your senses and restore biological balance with our traditional therapeutic treatments.</p>
+                </div>
+                
+                <div class="therapy-benefits-container">
+                    <div class="therapy-benefits-intro">
+                        <p data-i18n="therapy_benefits_intro">Traditional wellness therapies (like Thokkanam, Varmam, and Steam Bath) integrate ancient Siddha & Ayurveda wisdom to heal the body, mind, and spirit. These natural treatments work in harmony with your body to restore balance and vitality.</p>
+                    </div>
+                    <div class="therapy-benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                            <div class="benefit-content">
+                                <h4 data-i18n="benefit_2_title">Natural Pain Relief</h4>
+                                <p data-i18n="benefit_2_desc">Tones muscles, relieves stiffness, and alleviates chronic joint, back, and muscular pain.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-spa"></i></div>
+                            <div class="benefit-content">
+                                <h4 data-i18n="benefit_3_title">Stress & Anxiety Reduction</h4>
+                                <p data-i18n="benefit_3_desc">Calms the nervous system, melts away daily stress, and promotes deep, restful sleep.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-shield-virus"></i></div>
+                            <div class="benefit-content">
+                                <h4 data-i18n="benefit_4_title">Enhanced Immunity</h4>
+                                <p data-i18n="benefit_4_desc">Stimulates energy channels and vital points (Varmam) to strengthen the body's natural defense systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Modern Wellness Massage Sofa Feature -->
+                    <div class="modern-wellness-box animated fadeInUp" style="margin-top: 40px; margin-bottom: 40px;">
+                        <div class="modern-wellness-content">
+                            <div class="wellness-text-section">
+                                <div class="wellness-box-header">
+                                    <div class="wellness-icon"><i class="fas fa-couch"></i></div>
+                                    <div class="wellness-title-info">
+                                        <h4 data-i18n="therapy_service_title">Modern Massage Chair Facility</h4>
+                                        <span class="badge-new">New / புதியது</span>
+                                    </div>
+                                </div>
+                                <p data-i18n="therapy_service_desc">A modern Echo Pro Massage Chair facility is available at our Pandit Anandam Siddha & Ayurveda Marunthagam. This service provides a Pain Relief and Relaxation experience designed to reduce body fatigue, muscle stiffness, back pain, neck pain, and joint discomfort.<br><br>Offered alongside traditional Siddha and Ayurvedic medicines, this service aims to bring body rejuvenation, peace of mind, and daily comfort. Designed with modern technology, this massage chair delivers a soothing, full-body massage experience.</p>
+                            </div>
+                            <div class="wellness-image-section">
+                                <img src="assets/massage_chair.png" id="massage-chair-image" alt="Echo Pro Full Body Massage Chair" class="massage-chair-img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>PANDIT ANANDAM</h3>
+                    <p data-i18n="footer_desc">Preserving traditional wellness systems since generations. Delivering authentic Siddha and Ayurvedic healthcare to your doorstep.</p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="therapy.html" data-i18n="nav_therapy">Wellness Therapy</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+                        <li><a href="reviews.html" data-i18n="nav_reviews">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4 data-i18n="footer_contact">Contact Details</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="contact_address_val">East Car Street, Rameswaram, Tamil Nadu</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span data-i18n="contact_phone_val">+91 70106 00410</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:nallan438@gmail.com" style="color: inherit; text-decoration: none;">nallan438@gmail.com</a></span>
+                        </li>
+                    </ul>
+                    
+                    <div class="footer-delivery-promise">
+                        <i class="fas fa-shipping-fast"></i>
+                        <p data-i18n="footer_delivery_note">📦 Door Delivery Available</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center" style="display: block;">
+                <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #cbd5e1; font-size: 0.85rem; vertical-align: middle;">
+                    <span data-i18n="footer_copyright">© 2026 Pandit Anandam Siddha & Ayurveda Marunthagam. All rights reserved.</span>
+                    <span style="margin: 0 15px;">|</span>
+                    <span data-i18n="footer_developer">Website was Developed by Heptagenix Solutions and all rights reserved 2026</span>
+                </marquee>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- WELLNESS THERAPY BOOKING MODAL -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-i18n="booking_title">Book a Wellness Session</h3>
+                <button class="btn-close-modal" onclick="closeModal('booking-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="book-name" data-i18n="booking_name">Your Full Name</label>
+                        <input type="text" id="book-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-phone" data-i18n="booking_phone">Phone Number</label>
+                        <input type="tel" id="book-phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-date" data-i18n="booking_date">Preferred Date</label>
+                        <input type="date" id="book-date" class="form-control" required style="background-color: var(--color-bg-cream);">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-therapy" data-i18n="booking_select_therapy">Select Therapy</label>
+                        <select id="book-therapy" class="form-control" style="background-color: var(--color-bg-cream);">
+                            <option value="Thokkanam" data-i18n="therapy_thokkanam_title">Thokkanam (Physical Therapy)</option>
+                            <option value="Varmam" data-i18n="therapy_varmam_title">Varmam Therapy (Vital Points)</option>
+                            <option value="Kayakalpa" data-i18n="therapy_kayakalpa_title">Kayakalpa (Rejuvenation)</option>
+                            <option value="Steam Bath" data-i18n="therapy_steambath_title">Herbal Steam Bath</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-secondary w-full" style="width: 100%; margin-top: 10px;" data-i18n="booking_submit">Confirm Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRANSACTION SUCCESS CONFIRMATION MODAL -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="success-icon-badge"><i class="fas fa-check"></i></div>
+                <h3 id="confirm-modal-title" style="margin-bottom: 15px;">Success</h3>
+                <p id="confirm-modal-text" style="color: var(--color-text-muted); margin-bottom: 25px;"></p>
+                <button class="btn btn-primary" onclick="closeModal('confirm-modal')">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Translation Dictionary Database & Controller scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Pandit Anandam Siddha & Ayurveda Marunthagam</title>
+    <meta name="description" content="Read reviews from patients who found healing through our Siddha & Ayurveda medicines. Share your experience.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" id="favicon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.png" alt="Pandit Anandam Logo" class="logo-img" id="logo-image">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title" data-i18n="logo_title">PANDIT ANANDAM</span>
+                    <span class="logo-tag" data-i18n="logo_tag">Siddha & Ayurveda</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="about.html" data-i18n="nav_about">About Us</a>
+                <a href="therapy.html" data-i18n="nav_therapy">Wellness Therapy</a>
+                <a href="products.html" data-i18n="nav_products">Products</a>
+                <a href="reviews.html" class="active" data-i18n="nav_reviews">Reviews</a>
+                <a href="contact.html" data-i18n="nav_contact">Contact Us</a>
+                <a href="location.html" data-i18n="nav_location">Location</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="lang-toggle" class="btn-lang">தமிழ்</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div id="mobile-menu-drawer" class="drawer mobile-nav-drawer">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h3>Menu</h3>
+                <button class="btn-close-drawer" onclick="closeModal('mobile-menu-drawer')">&times;</button>
+            </div>
+            <div class="mobile-nav-body">
+                <nav class="mobile-nav-links">
+                    <a href="index.html" data-i18n="nav_home">Home</a>
+                    <a href="about.html" data-i18n="nav_about">About Us</a>
+                    <a href="therapy.html" data-i18n="nav_therapy">Wellness Therapy</a>
+                    <a href="products.html" data-i18n="nav_products">Products</a>
+                    <a href="reviews.html" class="active" data-i18n="nav_reviews">Reviews</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact Us</a>
+                    <a href="location.html" data-i18n="nav_location">Location</a>
+                </nav>
+                <button id="lang-toggle-mobile" class="btn btn-secondary w-full" style="width: 100%;">English / தமிழ்</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTENT -->
+    <main style="padding-top: 120px; min-height: 80vh;">
+        <!-- REVIEWS SECTION -->
+        <section id="reviews" class="reviews section-padding">
+            <!-- Background Video -->
+            <video class="reviews-video" autoplay loop muted playsinline -webkit-playsinline preload="auto">
+                <source src="assets/spinning logo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Overlay to fade background and keep text readable -->
+            <div class="reviews-overlay"></div>
+
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="nav_reviews">Reviews</h2>
+                    <p data-i18n="reviews_subtitle">Read honest experiences from people who found healing and health through our genuine medicines and products.</p>
+                </div>
+
+                <div class="reviews-grid" id="reviews-list-container">
+                    <!-- Rendered Dynamically -->
+                </div>
+
+
+
+                <!-- Ad Videos Section (Visible only when Tamil language is active) -->
+                <div id="reviews-ads-container" class="reviews-ads-container hidden" style="margin-top: 50px;">
+                    <h3 class="ads-title text-center" data-i18n="reviews_ads_title">விளம்பரங்கள்</h3>
+                    <div class="ads-grid">
+                        <div class="ad-video-wrapper">
+                            <video class="ad-video" controls playsinline preload="metadata">
+                                <source src="assets/AD1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="ad-video-wrapper">
+                            <video class="ad-video" controls playsinline preload="metadata">
+                                <source src="assets/AD2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="ad-image-wrapper">
+                            <img src="assets/massage_chair_banner.jpg" alt="Echo Pro Massage Chair Banner" class="ad-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>PANDIT ANANDAM</h3>
+                    <p data-i18n="footer_desc">Preserving traditional wellness systems since generations. Delivering authentic Siddha and Ayurvedic healthcare to your doorstep.</p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="therapy.html" data-i18n="nav_therapy">Wellness Therapy</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+                        <li><a href="reviews.html" data-i18n="nav_reviews">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4 data-i18n="footer_contact">Contact Details</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="contact_address_val">East Car Street, Rameswaram, Tamil Nadu</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span data-i18n="contact_phone_val">+91 70106 00410</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:nallan438@gmail.com" style="color: inherit; text-decoration: none;">nallan438@gmail.com</a></span>
+                        </li>
+                    </ul>
+                    
+                    <div class="footer-delivery-promise">
+                        <i class="fas fa-shipping-fast"></i>
+                        <p data-i18n="footer_delivery_note">📦 Door Delivery Available</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center" style="display: block;">
+                <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #cbd5e1; font-size: 0.85rem; vertical-align: middle;">
+                    <span data-i18n="footer_copyright">© 2026 Pandit Anandam Siddha & Ayurveda Marunthagam. All rights reserved.</span>
+                    <span style="margin: 0 15px;">|</span>
+                    <span data-i18n="footer_developer">Website was Developed by Heptagenix Solutions and all rights reserved 2026</span>
+                </marquee>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- TRANSACTION SUCCESS CONFIRMATION MODAL -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="success-icon-badge"><i class="fas fa-check"></i></div>
+                <h3 id="confirm-modal-title" style="margin-bottom: 15px;">Success</h3>
+                <p id="confirm-modal-text" style="color: var(--color-text-muted); margin-bottom: 25px;"></p>
+                <button class="btn btn-primary" onclick="closeModal('confirm-modal')">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Translation Dictionary Database & Controller scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
